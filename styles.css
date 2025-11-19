@@ -1,0 +1,246 @@
+/* ======================================================== */
+
+body {
+    /* Faz o body ocupar pelo menos a altura da tela */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    /* Só para dar um visualzinho */
+    background-color: #f8f9fa;
+}
+
+.tag-badge {
+    margin-right: 0.25rem;
+}
+
+/* ======================================================== */
+
+/* Seção hero (capa) */
+.hero-section {
+    margin-top: 0;
+    /*padding-top: 120px; mantém a altura interna confortável */
+    padding: 100px 15px 80px;
+    background: linear-gradient(135deg, #6200ee, #3700b3);
+    color: #fff;
+    width: 100%;
+    display: block;
+}
+
+.hero-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.hero-chip {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.hero-btn {
+    margin-top: 25px;
+}
+
+.hero-section {
+    background-image: url('https://wallpapers.com/images/hd/1920x1080-hd-space-ab4lm018jxlopn1i.jpg');
+    background-repeat: no-repeat;      /* NÃO repetir */
+    background-size: cover;            /* cobre toda a área sem repetir */
+    background-position: center center;/* mantém foco central */
+    background-attachment: fixed;      /* opcional: efeito elegante ao rolar */
+}
+
+/* ======================================================== */
+
+/* FOTO DE PERFIL */
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* deixa redondo */
+    overflow: hidden;  /* corta o excesso da imagem */
+    margin: 0 auto;    /* centraliza */
+    border: 4px solid var(--md-primary); /* borda elegante */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ajusta sem distorcer */
+}
+
+/* Rodapé */
+footer {
+    padding: 16px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #757575;
+}
+
+/* ======================================================== */
+
+.navbar-custom {
+    background-color: #4db8ff !important;   /* azul claro */
+    /* opcional: deixa o texto mais visível */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#contato a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+#contato i {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* ======================================================== */
+
+.foto-perfil {
+    width: 120px;               /* tamanho menor */
+    height: 120px;              /* tamanho menor */
+    border-radius: 50%;         /* imagem redonda */
+    overflow: hidden;
+    margin: 0 auto;
+
+    border: 4px solid #4db8ff;  /* mesma cor da NAVBAR */
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* mantém proporção */
+}
+
+#fosco-preto{
+    background: rgba(0, 0, 0, 0.45);   /* fundo escuro semi-transparente */
+    backdrop-filter: blur(10px);       /* efeito de blur */
+    -webkit-backdrop-filter: blur(10px); /* suporte para Safari */
+    
+    border-radius: 16px;               /* bordas arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* borda sutil */
+
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 1200px;       /* impede que tudo espalhe demais */
+    margin: 0 auto;           /* centraliza horizontalmente */
+}
+
+/* ======================================================== */
+
+#topo-hero {
+    height: 100vh;               /* ocupa a tela toda */
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;      /* alinha horizontalmente */
+    align-items: center;          /* alinha verticalmente */
+    padding-bottom: 40px;
+    box-sizing: border-box;
+
+    margin-top: 0;
+    padding-top: 0;   /* sem compensação */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mobile: HERO deve crescer conforme o conteúdo */
+@media (max-width: 768px) {
+    #topo-hero {
+        height: auto;       /* deixa crescer livremente */
+        min-height: auto;   /* deixa crescer livremente */
+        padding-top: 120px; /* navbar + respiro */
+        padding-bottom: 60px;
+        display: block;     /* remove o flex vertical */
+    }
+}
+
+#campo-busca {
+    min-height: 100vh;     /* ocupa toda a altura */
+    display: flex;
+    align-items: center;   /* centraliza todo o conteúdo verticalmente */
+}
+
+/* ======================================================== */
+
+#btn-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: none; /* começa escondido */
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#btn-topo i {
+    font-size: 20px;
+}
+
+/* ======================================================== */
+
+.card-clickable {
+    transition: transform .15s ease, box-shadow .15s ease, border .15s ease;
+    border: 1px solid #D2D2D2; /* borda invisível */
+    border-radius: 8px;
+}
+
+.card-clickable:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border-color: #4db8ff; /* borda azul */
+}
+
+.card-azul{
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border: 1px solid #D2D2D2; /* borda invisível */
+    border-radius: 8px;
+    border-color: #4db8ff; /* borda azul */
+}
+
+/* ======================================================== */
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-date {
+    font-size: 0.85rem;
+    color: #4db8ff; /* mesmo azul da navbar */
+    white-space: nowrap;
+}
