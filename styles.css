@@ -60,7 +60,7 @@ footer {
 }
 
 .hero-section {
-    background-image: url('https://wallpapers.com/images/hd/1920x1080-hd-space-ab4lm018jxlopn1i.jpg');
+    /*background-image: url('https://wallpapers.com/images/hd/1920x1080-hd-space-ab4lm018jxlopn1i.jpg');*/
     background-repeat: no-repeat;      /* NÃO repetir */
     background-size: cover;            /* cobre toda a área sem repetir */
     background-position: center center;/* mantém foco central */
